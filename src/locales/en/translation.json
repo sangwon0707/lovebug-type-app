@@ -16,7 +16,7 @@
     "compatibilityTitle": "Compatibility",
     "goodMatch": "Best Match",
     "badMatch": "Worst Match",
-    "heartbeatTemperature": "Love Instinct",
+    "LoveInstinct": "Love Instinct",
     "shareWithFriendsTitle": "Share with friends",
     "shareWithFriendsDescription": "Share this test with your friends and find out their inner lovebug!"
   },
@@ -138,7 +138,7 @@
         "pie": "Jumping Heart Lovebug",
         "emoji": "💖",
         "description": "'Love? It has to be fun!'<br>A type that enjoys spontaneous and free love. Dates are decided on the spur of the moment! Plans? They don't have any. A free lovebug who values atmosphere and fun over emotions.",
-        "heartbeatTemperature": "85℃"
+        "LoveInstinct": "★★★★"
       },
       "ENFJ": {
         "pie": "Starchaser Lovebug",
@@ -156,13 +156,13 @@
         "pie": "Pink Harmony Lovebug",
         "emoji": "💞",
         "description": "'Love must be sincere!'<br>They value emotional exchange and deep conversations the most. They dream of a 'soul connection' with their partner and always approach with sincerity. A devoted and warm love that lasts slowly and for a long time.",
-        "heartbeatTemperature": "☕ 60℃"
+        "LoveInstinct": "★★★"
       },
       "INTJ": {
         "pie": "Blue Fire Lovebug",
         "emoji": "💙",
         "description": "Acting cool on the outside, but burning inside.<br>A surprising charm that immerses them deeply after pretending to be cool! They are skilled in psychological warfare and are good at push-and-pull. A cool-headed lover in the flames who enjoys appropriate distance and tension.",
-        "heartbeatTemperature": "☕ 75℃"
+        "LoveInstinct": "★★★★"
       },
       "ISFP": {
         "pie": "Velvet Berry Lovebug",
@@ -204,7 +204,7 @@
         "pie": "Sloth Lovebug",
         "emoji": "🦥",
         "description": "'Slowly, slowly, I'll love at my own pace.'<br>They love being alone so much that they start relationships quietly and slowly. They dislike rushing and only want to meet people who respect their pace. But once they open their heart, they are consistent and unchanging.",
-        "heartbeatTemperature": "10℃"
+        "LoveInstinct": "★"
       },
       "ESTJ": {
         "pie": "Run & Go Lovebug",
