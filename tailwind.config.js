@@ -1,0 +1,45 @@
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Orbit', 'sans-serif'],
+      },
+      colors: {
+        coral: '#ED6A5E',
+        'primary-orange': '#fb923c',
+        'primary-yellow': '#eab308',
+        'primary-amber': '#f59e0b',
+        'bg-gradient-start': '#fff7ed',
+        'bg-gradient-middle': '#fefce8',
+        'bg-gradient-end': '#fffbeb',
+        'card-bg': 'rgba(255, 255, 255, 0.8)',
+        'card-border': '#fed7aa',
+        'card-content-bg': 'rgba(255, 237, 213, 0.5)',
+        'text-primary': '#374151',
+        'text-secondary': '#4b5563',
+        'text-muted': '#6b7280',
+        'success-color': '#10b981',
+        'warning-color': '#f59e0b',
+        'error-color': '#ef4444',
+        // New colors for the space theme
+        'slate-900': '#0f172a',
+        'purple-900': '#581c87',
+        'indigo-900': '#312e81',
+        'purple-300': '#d8b4fe',
+        'indigo-300': '#a5b4fc',
+        'violet-300': '#c4b5fd',
+        'purple-600': '#9333ea',
+        'indigo-600': '#4f46e5',
+        'purple-700': '#7e22ce',
+        'indigo-700': '#4338ca',
+        'purple-500': '#a855f7',
+        'indigo-500': '#6366f1',
+        'purple-100': '#f3e8ff',
+        'purple-200': '#e9d5ff',
+      },
+    },
+  },
+  plugins: [],
+};
+

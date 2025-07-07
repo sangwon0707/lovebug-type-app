@@ -1,0 +1,217 @@
+{
+  "startPage": {
+    "title": "I'm a Lovebug?!",
+    "description": "I lost my mind due to a lovebug attack,\nand when I opened my eyes... I had become a lovebug!\nWhat kind of lovebug am I?",
+    "startButton": "Find My Lovebug Type"
+  },
+  "questionPage": {
+    "questionNumber": "Question {{current}}/{{total}}",
+    "nextButton": "Next"
+  },
+  "resultPage": {
+    "yourResult": "Your Lovebug Type: {{result}}",
+    "downloadButton": "Download",
+    "shareButton": "Share Result",
+    "restartButton": "Restart",
+    "compatibilityTitle": "Compatibility",
+    "goodMatch": "Best Match",
+    "badMatch": "Worst Match",
+    "heartbeatTemperature": "Love Instinct",
+    "shareWithFriendsTitle": "Share with friends",
+    "shareWithFriendsDescription": "Share this test with your friends and find out their inner lovebug!"
+  },
+  "share": {
+    "title": "My Lovebug Type Result",
+    "text": "I found out my Lovebug Type! Find out yours here:"
+  },
+  "adPage": {
+    "loadingAd": "Loading your result...",
+    "pleaseWait": "Please wait a moment while we find your inner lovebug."
+  },
+  "lovebugData": {
+    "questions": [
+      {
+        "question": "One day, I, a lovebug, flew into the human world! I:",
+        "choices": [
+          { "text": "Flap my wings near new people to attract attention!" },
+          { "text": "Quietly hide in a corner, secretly observe, and chuckle to myself." }
+        ]
+      },
+      {
+        "question": "A lovebug neighborhood party invitation arrives! I:",
+        "choices": [
+          { "text": "Excitedly sparkle my wings and immediately attend for a fun dance party!" },
+          { "text": "Think, 'What does that have to do with me?' and prefer to quietly enjoy honey alone in a corner." }
+        ]
+      },
+      {
+        "question": "The moment I peek at a human couple, I:",
+        "choices": [
+          { "text": "'Wow! I want to experience love like that!' and my heart flutters as I rush over." },
+          { "text": "Chuckle to myself, 'Heh heh, I'll approach slowly and quietly later.'" }
+        ]
+      },
+      {
+        "question": "As a lovebug spreading love today, when I see a relationship, I:",
+        "choices": [
+          { "text": "'These two are destined!' I first imagine their fate." },
+          { "text": "'Height, age, distance, finances... I first consider the conditions' a cold analysis." }
+        ]
+      },
+      {
+        "question": "When another lovebug approaches me, I:",
+        "choices": [
+          { "text": "'Maybe we're destined for love?' My heart is already pounding!" },
+          { "text": "'Are their wings strong? Is their food supply abundant?' I check practical conditions." }
+        ]
+      },
+      {
+        "question": "My thoughts tonight are:",
+        "choices": [
+          { "text": "'If I were a queen bee, who would love me?' A time for wild fantasies." },
+          { "text": "'I need to check the price of honey at the bee market tomorrow.' Reality check mode." }
+        ]
+      },
+      {
+        "question": "When a friend lovebug, who failed in love, is crying, I:",
+        "choices": [
+          { "text": "'Oh dear... you must have been so sad!' I cry with them and pat their wings." },
+          { "text": "'What was the cause of the failure? Let's change the strategy next time.' I analyze the problem first." }
+        ]
+      },
+      {
+        "question": "If another lovebug makes a shocking confession to me, I:",
+        "choices": [
+          { "text": "I'm flustered and overwhelmed with emotion, unable to speak, but I try to understand." },
+          { "text": "I immediately look for 'logical alternatives' in my head. 'How do I handle this?'" }
+        ]
+      },
+      {
+        "question": "If I had to pick one principle for my relationships:",
+        "choices": [
+          { "text": "If emotions connect, all problems can be solved!" },
+          { "text": "Emotions alone aren't enough, practical judgment always comes first." }
+        ]
+      },
+      {
+        "question": "Suddenly, I'm in danger of being caught by a human couple! I:",
+        "choices": [
+          { "text": "Spread my wings and spontaneously leap out to escape!" },
+          { "text": "Quickly calculate an escape route in my head and move." }
+        ]
+      },
+      {
+        "question": "My relationship strategy goal today is:",
+        "choices": [
+          { "text": "It will change spontaneously as I go! As my heart desires~" },
+          { "text": "I've perfectly planned a schedule: 'Approach at this time, charm at this time.'" }
+        ]
+      },
+      {
+        "question": "On a date day, my preparation style is:",
+        "choices": [
+          { "text": "Spontaneous styling based on my mood, the weather, and the hive situation that day!" },
+          { "text": "I've completed simulations of today's date outfit and even dialogue since yesterday!" }
+        ]
+      }
+    ],
+    "lovebugTypes": {
+      "ISFJ": {
+        "pie": "Softbloom Lovebug",
+        "emoji": "🌸",
+        "description": "Slowly, quietly, a type that blossoms their heart.<br>Speed isn't important in love, 'sincerity' is the most important thing, isn't it? They slowly read the other person's heart and patiently wait until a deep connection is formed. They like being alone, but are ready to open their heart to anyone with whom they can truly connect!",
+        "heartbeatTemperature": "40℃"
+      },
+      "ESFP": {
+        "pie": "Wildlover Lovebug",
+        "emoji": "🔥",
+        "description": "A type that is instantly 'heart-struck' by appearance.<br>They can't hide their excitement, and in the early stages of a relationship, they burn like fire. They are spontaneous and direct, so a date invitation is 'Let's meet right now!' But if they consider someone 'their person,' they immerse themselves passionately.",
+        "heartbeatTemperature": "100℃"
+      },
+      "ISTJ": {
+        "pie": "Slow Snail Lovebug",
+        "emoji": "🐌",
+        "description": "Speed? I don't know about that, I want a cautious love.<br>A type that deeply understands the other person and slowly opens their heart. They may seem indifferent on the outside, but inside they are incredibly warm and deep. They only confide in truly trustworthy people.",
+        "heartbeatTemperature": "15℃"
+      },
+      "ENFP": {
+        "pie": "Jumping Heart Lovebug",
+        "emoji": "💖",
+        "description": "'Love? It has to be fun!'<br>A type that enjoys spontaneous and free love. Dates are decided on the spur of the moment! Plans? They don't have any. A free lovebug who values atmosphere and fun over emotions.",
+        "heartbeatTemperature": "85℃"
+      },
+      "ENFJ": {
+        "pie": "Starchaser Lovebug",
+        "emoji": "🌟",
+        "description": "I am the protagonist, the center of the world!<br>I enjoy attention from others, and compliments on my appearance are as sweet as honey. I might have a slight attention-seeking tendency, but I have a very keen eye for people. Love is always full of excitement, and appealing to my charm is basic.",
+        "heartbeatTemperature": "80℃"
+      },
+      "ESFJ": {
+        "pie": "Honeydrop Lovebug",
+        "emoji": "🍯",
+        "description": "'Getting close? It's a piece of cake!'<br>With a warm and friendly personality, they are masters at quickly becoming close. They are also excellent at sensing the other person's mood. In love, they are always sweet and caring, and the moment of giving and receiving love is happiness!",
+        "heartbeatTemperature": "☕ 65℃"
+      },
+      "INFJ": {
+        "pie": "Pink Harmony Lovebug",
+        "emoji": "💞",
+        "description": "'Love must be sincere!'<br>They value emotional exchange and deep conversations the most. They dream of a 'soul connection' with their partner and always approach with sincerity. A devoted and warm love that lasts slowly and for a long time.",
+        "heartbeatTemperature": "☕ 60℃"
+      },
+      "INTJ": {
+        "pie": "Blue Fire Lovebug",
+        "emoji": "💙",
+        "description": "Acting cool on the outside, but burning inside.<br>A surprising charm that immerses them deeply after pretending to be cool! They are skilled in psychological warfare and are good at push-and-pull. A cool-headed lover in the flames who enjoys appropriate distance and tension.",
+        "heartbeatTemperature": "☕ 75℃"
+      },
+      "ISFP": {
+        "pie": "Velvet Berry Lovebug",
+        "emoji": "🍓",
+        "description": "A person with a warm and cozy atmosphere.<br>They prefer calm and stable relationships, and hate rushing things! They find happiness in small daily routines and are a genuine lover who lasts long once they start. They don't easily end things once they begin.",
+        "heartbeatTemperature": "45℃"
+      },
+      "ESTP": {
+        "pie": "Free Dancer Lovebug",
+        "emoji": "💃",
+        "description": "A type that enjoys fast and thrilling relationships!<br>Spontaneous and ever-changing, they can start a relationship with someone they just met today! They dislike being tied down and enjoy love in a fun and lighthearted way. A love adventurer who doesn't know who they'll spark with tomorrow.",
+        "heartbeatTemperature": "100℃"
+      },
+      "INFP": {
+        "pie": "Rainbow Worm Lovebug",
+        "emoji": "🌈",
+        "description": "'I'm a lovebug with a lot of attachment!'<br>They have deep emotions and strongly rely on their partner when in love. They might have a slight tendency to be possessive, but it's because they have so much affection. They dislike being alone and always need someone by their side.",
+        "heartbeatTemperature": "55℃"
+      },
+      "ENTP": {
+        "pie": "Shooting Star Lovebug",
+        "emoji": "🌠",
+        "description": "'Free love is the best!'<br>An adventurer type who can't stay in one place for long and constantly seeks new stimulation. They are honest about intense momentary attractions, but can also cool down easily. Instead of leaving coolly when bored, they immerse themselves passionately in that moment.",
+        "heartbeatTemperature": "80℃"
+      },
+      "ISTP": {
+        "pie": "Sugar Love Lovebug",
+        "emoji": "🍬",
+        "description": "'Sweet and warm love is the best!'<br>A type that strongly embraces their partner and gives selfless love. They always seek stable relationships and are very responsible. In love, they like sweet atmospheres and don't hold back on sincere expressions of affection.",
+        "heartbeatTemperature": "45℃"
+      },
+      "ENTJ": {
+        "pie": "Mirage Lovebug",
+        "emoji": "✨",
+        "description": "'Love is like a game!'<br>A master at captivating others with a mysterious aura and enchanting words. They always lead the relationship leisurely from a step behind and enjoy psychological warfare. They don't take love too seriously, but they are better than anyone at stealing hearts.",
+        "heartbeatTemperature": "100℃"
+      },
+      "INTP": {
+        "pie": "Sloth Lovebug",
+        "emoji": "🦥",
+        "description": "'Slowly, slowly, I'll love at my own pace.'<br>They love being alone so much that they start relationships quietly and slowly. They dislike rushing and only want to meet people who respect their pace. But once they open their heart, they are consistent and unchanging.",
+        "heartbeatTemperature": "10℃"
+      },
+      "ESTJ": {
+        "pie": "Run & Go Lovebug",
+        "emoji": "🏃",
+        "description": "'Love fast, run fast!'<br>A type that enjoys spontaneous and energetic relationships. They constantly seek new people, new places, and new excitement. Casual encounters are okay, and they are free-love advocates who run away immediately when bored!",
+        "heartbeatTemperature": "☕ 65℃"
+      }
+    }
+  }
+}
