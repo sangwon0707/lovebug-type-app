@@ -10,30 +10,30 @@ const AdPage: React.FC<AdPageProps> = ({ onAdComplete }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Monetag 광고 스크립트 삽입 (개발 중 비활성화)
-    // const scriptCode = "(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9498297,document.createElement('script'))";
-    // const scriptElement = document.createElement('script');
-    // scriptElement.innerHTML = scriptCode;
-    // document.body.appendChild(scriptElement);
+    // Monetag 광고 스크립트 삽입
+    const scriptCode = "(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9544826,document.createElement('script'))";
+    const scriptElement = document.createElement('script');
+    scriptElement.innerHTML = scriptCode;
+    document.body.appendChild(scriptElement);
 
-    // 로딩 바 진행 (개발 중에는 빠르게)
+    // 로딩 바 진행
     const interval = setInterval(() => {
       setProgress((prevProgress) => {
         if (prevProgress >= 100) {
           clearInterval(interval);
           return 100;
         }
-        return prevProgress + 100; // 0.1초만에 완료
+        return prevProgress + 1; // 100단계로 진행
       });
-    }, 100);
+    }, 30); // 3초 동안 진행 (30ms * 100 = 3000ms = 3초)
 
-    // 일정 시간 후 결과 페이지로 자동 전환 (개발 중에는 빠르게)
+    // 일정 시간 후 결과 페이지로 자동 전환
     const timer = setTimeout(() => {
       onAdComplete();
-    }, 100); // 0.1초 후 전환
+    }, 3000); // 3초 후 전환
 
     return () => {
-      // document.body.removeChild(scriptElement);
+      document.body.removeChild(scriptElement);
       clearInterval(interval);
       clearTimeout(timer);
     };
