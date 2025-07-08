@@ -18,6 +18,8 @@ const StartPage: React.FC<StartPageProps> = ({ onStart }) => {
       <div
         className="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${startPageBackground})` }}
+        role="img"
+        aria-label="Lovebug Type App 시작 페이지 배경 이미지"
       ></div>
       <div className="absolute inset-0 bg-black opacity-40"></div> {/* Semi-transparent overlay */}
       <div className="relative z-10 flex flex-col h-full start-page-content-wrapper">
