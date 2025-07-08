@@ -30,7 +30,7 @@ const AdPage: React.FC<AdPageProps> = ({ onAdComplete }) => {
     // 일정 시간 후 결과 페이지로 자동 전환
     const timer = setTimeout(() => {
       onAdComplete();
-    }, 3000); // 3초 후 전환
+    }, 2000); // 2초 후 전환
 
     return () => {
       document.body.removeChild(scriptElement);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import MobileAppWrapper from './components/MobileAppWrapper';
 import StartPage from './pages/StartPage';
@@ -12,12 +12,38 @@ type GameState = 'start' | 'playing' | 'ad' | 'result';
 
 function App() {
   
-  const [gameState, setGameState] = useState<GameState>('start');
-  const [answers, setAnswers] = useState<string[]>([]);
-  const [result, setResult] = useState<LovebugType | null>(null);
+  const [gameState, setGameState] = useState<GameState>(() => {
+    const savedGameState = sessionStorage.getItem('gameState');
+    return (savedGameState ? JSON.parse(savedGameState) : 'start') as GameState;
+  });
+  const [answers, setAnswers] = useState<string[]>(() => {
+    const savedAnswers = sessionStorage.getItem('answers');
+    return savedAnswers ? JSON.parse(savedAnswers) : [];
+  });
+  const [result, setResult] = useState<LovebugType | null>(() => {
+    const savedResult = sessionStorage.getItem('result');
+    return savedResult ? JSON.parse(savedResult) : null;
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('gameState', JSON.stringify(gameState));
+  }, [gameState]);
+
+  useEffect(() => {
+    sessionStorage.setItem('answers', JSON.stringify(answers));
+  }, [answers]);
+
+  useEffect(() => {
+    if (result) {
+      sessionStorage.setItem('result', JSON.stringify(result));
+    } else {
+      sessionStorage.removeItem('result');
+    }
+  }, [result]);
 
   const handleStart = () => {
     setAnswers([]);
+    setResult(null);
     setGameState('playing');
   };
 
