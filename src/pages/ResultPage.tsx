@@ -237,7 +237,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
               <div className="relative group profile-image-container w-44 h-44 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full blur-2xl opacity-40 scale-125 group-hover:scale-150 transition-transform duration-500"></div>
                 <img 
-                  src={mbtiImage} 
+                  src={mbtiImage || ''} 
                   alt={result}
                   className="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-2xl mt-4 mb-4 profile-image group-hover:scale-105 transition-transform duration-300"
                 />
