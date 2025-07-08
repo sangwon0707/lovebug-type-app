@@ -3,6 +3,7 @@ import { Download, RotateCcw, Share2, Heart, Sparkles, Star, Zap, Crown, Flame }
 import { lovebugData, LovebugType, mbtiImageMap } from '../data/mbti';
 import { useTranslation } from 'react-i18next';
 import html2canvas from 'html2canvas';
+import DownloadView from '../components/DownloadView';
 
 interface ResultPageProps {
   result: LovebugType;
@@ -52,6 +53,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
   const [isShared, setIsShared] = useState(false);
   const [stars, setStars] = useState<number[]>([]);
   const resultRef = useRef<HTMLDivElement>(null);
+  const downloadRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setStars(Array.from({ length: 100 }, (_, i) => i));
@@ -59,13 +61,9 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
 
   const handleDownload = async () => {
     setIsDownloading(true);
-    if (resultRef.current) {
-      html2canvas(resultRef.current, {
-        useCORS: true,
-        ignoreElements: (element) => {
-          return element.id === 'restart-button';
-        }
-      }).then(canvas => {
+    await document.fonts.ready;
+    if (downloadRef.current) {
+      html2canvas(downloadRef.current, { scale: 2, logging: true }).then((canvas) => {
         const link = document.createElement('a');
         link.download = `Lovebug_Result_${result}.png`;
         link.href = canvas.toDataURL('image/png');
@@ -265,9 +263,9 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
                   </div>
                 </div>
                 <div className="glass-card rounded-xl p-3 text-center border border-purple-200/50 shadow-md compatibility-card min-h-[80px]">
-                  <div className="text-violet-600 text-sm font-bold">{t('resultPage.heartbeatTemperature')}</div>
+                  <div className="text-violet-600 text-sm font-bold">{t('resultPage.LoveInstinct')}</div>
                   <div className="text-gray-600 text-xs">
-                    {Array(resultData.LoveInstinct.length).fill('★').map((star, index) => (
+                    {Array(t(`lovebugData.lovebugTypes.${result}.LoveInstinct`).length).fill('★').map((star, index) => (
                       <span key={index} className="text-yellow-400">{star}</span>
                     ))}
                   </div>
@@ -312,6 +310,10 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
             {t('resultPage.shareWithFriendsDescription')}
           </p>
         </div>
+      </div>
+      {/* Hidden Download View */}
+      <div className="">
+        <DownloadView ref={downloadRef} result={result} />
       </div>
     </div>
   );
