@@ -40,7 +40,7 @@ const DownloadView = React.forwardRef<HTMLDivElement, DownloadViewProps>(
         {/* Image Section */}
         <div className="flex flex-col items-center justify-center my-2.5">
           <img 
-            src={mbtiImage} 
+            src={mbtiImage || ''} 
             alt={result}
             className="w-32 h-32 rounded-full object-cover border-2 border-gray-200 mb-4"
           />
