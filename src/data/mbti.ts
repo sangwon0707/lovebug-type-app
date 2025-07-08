@@ -1,17 +1,17 @@
 export const lovebugData = {
   questions: [
-    { emoji: "🦋", typeMap: { choice1: "F", choice2: "T" } },
-    { emoji: "🎉", typeMap: { choice1: "T", choice2: "F" } },
-    { emoji: "👀", typeMap: { choice1: "T", choice2: "F" } },
-    { emoji: "❤️", typeMap: { choice1: "I", choice2: "E" } },
-    { emoji: "💖", typeMap: { choice1: "E", choice2: "I" } },
-    { emoji: "💭", typeMap: { choice1: "I", choice2: "E" } },
-    { emoji: "😭", typeMap: { choice1: "N", choice2: "S" } },
-    { emoji: "😲", typeMap: { choice1: "S", choice2: "N" } },
-    { emoji: "⚖️", typeMap: { choice1: "S", choice2: "N" } },
-    { emoji: "🚨", typeMap: { choice1: "J", choice2: "P" } },
-    { emoji: "🎯", typeMap: { choice1: "J", choice2: "P" } },
-    { emoji: "💅", typeMap: { choice1: "J", choice2: "P" } },
+    { emoji: "🦋", typeMap: { choice1: "E", choice2: "I" } },  // 1번 질문 (E/I)
+    { emoji: "🎉", typeMap: { choice1: "E", choice2: "I" } },  // 2번 질문 (E/I)
+    { emoji: "👀", typeMap: { choice1: "E", choice2: "I" } },  // 3번 질문 (E/I)
+    { emoji: "❤️", typeMap: { choice1: "N", choice2: "S" } },  // 4번 질문 (N/S)
+    { emoji: "💖", typeMap: { choice1: "N", choice2: "S" } },  // 5번 질문 (N/S)
+    { emoji: "💭", typeMap: { choice1: "N", choice2: "S" } },  // 6번 질문 (N/S)
+    { emoji: "😭", typeMap: { choice1: "F", choice2: "T" } },  // 7번 질문 (F/T)
+    { emoji: "😲", typeMap: { choice1: "F", choice2: "T" } },  // 8번 질문 (F/T)
+    { emoji: "⚖️", typeMap: { choice1: "F", choice2: "T" } },  // 9번 질문 (F/T)
+    { emoji: "🚨", typeMap: { choice1: "P", choice2: "J" } },  // 10번 질문 (P/J)
+    { emoji: "🎯", typeMap: { choice1: "P", choice2: "J" } },  // 11번 질문 (P/J)
+    { emoji: "💅", typeMap: { choice1: "P", choice2: "J" } }   // 12번 질문 (P/J)
   ],
   results: {
     INFP: { compatibility: { best: ["ENFP"], worst: ["ISTJ"] } },
