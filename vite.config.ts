@@ -6,4 +6,7 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
   plugins: [react(), svgr()],
   base: '/lovebug-type-app/', // This should match your homepage in package.json
+  server: {
+    host: '0.0.0.0',
+  },
 })

@@ -10,14 +10,17 @@ interface ResultPageProps {
   onRestart: () => void;
 }
 
+const images = import.meta.glob('../assets/images/*.png', { eager: true, as: 'url' });
+
 const getMbtiImagePath = (mbtiType: LovebugType) => {
   const imageNumber = mbtiImageMap[mbtiType];
-  try {
-    return require(`../assets/images/${imageNumber}.png`);
-  } catch (error) {
-    console.error(`Image for ${mbtiType} (${imageNumber}.png) not found:`, error);
+  const imagePath = `../assets/images/${imageNumber}.png`;
+  const imageUrl = images[imagePath];
+  if (!imageUrl) {
+    console.error(`Image for ${mbtiType} (${imagePath}) not found.`);
     return null; // Or a placeholder image
   }
+  return imageUrl;
 };
 
 const FloatingElement = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
