@@ -26,6 +26,10 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionIndex, onAnswer }) 
   const question = lovebugData.questions[questionIndex];
   const progress = ((questionIndex + 1) / lovebugData.questions.length) * 100;
 
+  useEffect(() => {
+    setSelectedAnswer(null); // Reset selected answer when question changes
+  }, [questionIndex]);
+
   const [stars, setStars] = useState<number[]>([]);
 
   useEffect(() => {
@@ -174,7 +178,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionIndex, onAnswer }) 
           {/* Choices Container */}
           <div className="px-6 pb-8 space-y-4">
             <label 
-              key={0} 
+              key={`${questionIndex}-0`} 
               className={`glass-card flex items-center p-4 rounded-xl border border-purple-200/50 cursor-pointer shadow-md transition-all duration-200 
                 ${selectedAnswer === question.typeMap.choice1 ? 'bg-purple-500/30 border-purple-400 shadow-lg' : 'hover:bg-white/20 hover:border-purple-300'}`}
             >
@@ -189,7 +193,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionIndex, onAnswer }) 
               <span className="ml-4 text-gray-800 text-base font-medium drop-shadow-sm">{t(`lovebugData.questions.${questionIndex}.choices.0.text`)}</span>
             </label>
             <label 
-              key={1} 
+              key={`${questionIndex}-1`} 
               className={`glass-card flex items-center p-4 rounded-xl border border-purple-200/50 cursor-pointer shadow-md transition-all duration-200 
                 ${selectedAnswer === question.typeMap.choice2 ? 'bg-purple-500/30 border-purple-400 shadow-lg' : 'hover:bg-white/20 hover:border-purple-300'}`}
             >
