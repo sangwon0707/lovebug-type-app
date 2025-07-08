@@ -55,6 +55,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [isShared, setIsShared] = useState(false);
   const [stars, setStars] = useState<number[]>([]);
+  const [downloadViewVisible, setDownloadViewVisible] = useState(false); // New state for visibility
   const resultRef = useRef<HTMLDivElement>(null);
   const downloadRef = useRef<HTMLDivElement>(null);
 
@@ -64,16 +65,26 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
 
   const handleDownload = async () => {
     setIsDownloading(true);
+    setDownloadViewVisible(true); // Make DownloadView visible
     await document.fonts.ready;
+
+    // Wait for a short period to ensure the element is rendered
+    await new Promise(resolve => setTimeout(resolve, 100)); 
+
     if (downloadRef.current) {
       html2canvas(downloadRef.current, { scale: 2, logging: true }).then((canvas) => {
         const link = document.createElement('a');
         link.download = `Lovebug_Result_${result}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
+      }).finally(() => {
+        setDownloadViewVisible(false); // Hide DownloadView after capture
+        setIsDownloading(false);
       });
+    } else {
+      setDownloadViewVisible(false); // Hide DownloadView if ref is null
+      setIsDownloading(false);
     }
-    setIsDownloading(false);
   };
 
   const handleShare = () => {
@@ -315,7 +326,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
         </div>
       </div>
       {/* Hidden Download View */}
-      <div className="hidden">
+      <div className={downloadViewVisible ? "absolute top-0 left-0 -z-50" : "hidden"}>
         <DownloadView ref={downloadRef} result={result} />
       </div>
     </div>
