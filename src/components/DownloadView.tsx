@@ -2,18 +2,21 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { lovebugData, LovebugType, mbtiImageMap } from '../data/mbti';
 
+const images = import.meta.glob('../assets/images/*.png', { eager: true, as: 'url' });
+
 interface DownloadViewProps {
   result: LovebugType;
 }
 
 const getMbtiImagePath = (mbtiType: LovebugType) => {
   const imageNumber = mbtiImageMap[mbtiType];
-  try {
-    return require(`../assets/images/${imageNumber}.png`);
-  } catch (error) {
-    console.error(`Image for ${mbtiType} (${imageNumber}.png) not found:`, error);
+  const imagePath = `../assets/images/${imageNumber}.png`;
+  const imageUrl = images[imagePath];
+  if (!imageUrl) {
+    console.error(`Image for ${mbtiType} (${imagePath}) not found.`);
     return null; // Or a placeholder image
   }
+  return imageUrl;
 };
 
 const DownloadView = React.forwardRef<HTMLDivElement, DownloadViewProps>(

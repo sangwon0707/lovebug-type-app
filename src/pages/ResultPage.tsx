@@ -315,7 +315,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
         </div>
       </div>
       {/* Hidden Download View */}
-      <div className="">
+      <div className="hidden">
         <DownloadView ref={downloadRef} result={result} />
       </div>
     </div>
