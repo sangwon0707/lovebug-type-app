@@ -81,7 +81,7 @@ npm test
 > 1.  **빌드 명령어:** `npm run build`로 설정되어 있는지 확인합니다.
 > 2.  **배포 디렉토리 (Publish directory):** **`dist`**로 설정되어 있는지 확인합니다. (기존 Create React App의 `build` 폴더 대신 Vite는 `dist` 폴더를 사용합니다.)
 
-## 주요 변경 사항 (신입 개발자를 위한 설명)
+## 주요 변경 사항 
 
 이 프로젝트는 최근 **Create React App (CRA)에서 Vite로 마이그레이션**되었습니다. 이 과정에서 몇 가지 중요한 변경 사항이 있었습니다.
 
